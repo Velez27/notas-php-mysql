@@ -1,0 +1,83 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #3BE691;
+    color: #000;
+}
+
+.contenedor {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: "header header header header";
+    justify-items: center;
+}
+
+.vista_principal {
+    grid-area: header;
+    padding: 10px;
+    text-align: center;
+}
+
+.vista_notes label, textarea {
+    display: block;
+    background: #3BE691;
+}
+
+.vista_notes a, button {
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    width: 80px;
+    height: 20px;
+    background: #35FC60;
+    font-size: 20px;
+    border-radius: 4px;
+    color: #000;
+}
+
+.vista_notes a:hover, button:hover {
+    background: #42F233;
+}
+
+.vista_notes input, textarea {
+    width: 200px;
+    background: #35FCD1;
+    border: none;
+    color: #312f2f;
+    font-size: 20px;
+}
+
+#button_createNote {
+    width: 120px;
+    height: 25px;
+}
+
+.vista_notes textarea {
+    height: 160px;
+}
+
+@media screen and (max-width: 888px){
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas: "header header header";
+    }
+}
+
+@media screen and (max-width: 644px){
+    .contenedor {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "header header";
+    }
+}
+
+@media screen and (max-width: 458px){
+    .contenedor {
+        grid-template-columns: 1fr;
+        grid-template-areas: "header";
+    }
+}
